@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо | Фотограф</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #1b1c17; /* Глибокий природний темний колір */
+            color: #f4f1ea;            /* Колір слонової кістки для тексту */
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #24261f, #1b1c17);
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #a89f8d;
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+        
+        .avatar:hover { transform: rotate(5deg) scale(1.05); }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #a89f8d;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Стильна галерея */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .gallery {
+            column-count: 3; /* Кількість колонок як у журналах */
+            column-gap: 15px;
+        }
+
+        @media (max-width: 800px) { .gallery { column-count: 2; } }
+        @media (max-width: 500px) { .gallery { column-count: 1; } }
+
+        .photo-item {
+            margin-bottom: 15px;
+            break-inside: avoid;
+            background: #24261f;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            filter: grayscale(20%) brightness(0.9); /* Легкий ретро-ефект */
+        }
+
+        .photo-item:hover {
+            filter: grayscale(0%) brightness(1.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .photo-item img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid #2a2c24;
+            color: #6a6d5d;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 1px solid #a89f8d;
+            color: #a89f8d;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: #a89f8d;
+            color: #1b1c17;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="avatar.jpg" alt="Anna" class="avatar">
+        <h1>АННА</h1>
+        <p class="subtitle">Ловлю світло та емоції</p>
+    </header>
+
+    <div class="container">
+        <div class="gallery">
+            <div class="photo-item"><img src="1.jpg" alt="Портрет"></div>
+            <div class="photo-item"><img src="2.jpg" alt="Природа"></div>
+            <div class="photo-item"><img src="3.jpg" alt="Момент"></div>
+            <div class="photo-item"><img src="4.jpg" alt="Фото"></div>
+            <div class="photo-item"><img src="5.jpg" alt="Фото"></div>
+            <div class="photo-item"><img src="6.jpg" alt="Фото"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Готові до зйомки?</p>
+        <a href="https://instagram.com/your_nick" class="btn-contact">Написати в Instagram</a>
+        <p style="margin-top: 40px; font-size: 0.7rem;">&copy; 2026. Створено з душею.</p>
+    </footer>
+</body>
+</html>
