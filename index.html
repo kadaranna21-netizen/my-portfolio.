@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #1b1c17; /* Глибокий темний фон */
-            --text-color: #e0d8c3; /* Кремовий вінтажний текст */
-            --accent-color: #a67c52; /* Золотава бронза */
+            --bg-color: #1b1c17; 
+            --text-color: #e0d8c3; 
+            --accent-color: #a67c52; 
         }
 
         body {
@@ -32,7 +32,6 @@
             object-fit: cover;
             border: 2px solid var(--accent-color);
             margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
         h1 {
@@ -47,48 +46,66 @@
             font-style: italic;
             color: var(--accent-color);
             font-size: 1.1rem;
-            margin-top: 10px;
         }
 
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 40px;
             padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .gallery-item {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            text-align: center;
+        }
+
+        .image-container {
             position: relative;
             overflow: hidden;
             aspect-ratio: 4 / 5;
             border: 1px solid rgba(166, 124, 82, 0.2);
+            margin-bottom: 15px;
             transition: all 0.4s ease;
         }
 
-        .gallery-item img {
+        .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: sepia(20%);
             transition: 0.6s ease;
         }
 
-        .gallery-item:hover {
+        .view-more {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover .image-container {
             border-color: var(--accent-color);
             transform: translateY(-5px);
         }
 
         .gallery-item:hover img {
             transform: scale(1.08);
-            filter: sepia(0%);
+        }
+
+        .gallery-item:hover .view-more {
+            opacity: 1;
+            letter-spacing: 3px;
         }
 
         footer {
             text-align: center;
             padding: 100px 20px;
-            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
         }
 
         .btn-contact {
@@ -99,21 +116,18 @@
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 3px;
-            font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
         .btn-contact:hover {
             background: var(--accent-color);
             color: var(--bg-color);
-            box-shadow: 0 0 15px rgba(166, 124, 82, 0.4);
         }
 
         .copyright {
             margin-top: 50px;
             font-size: 0.75rem;
             opacity: 0.5;
-            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -126,28 +140,46 @@
 </header>
 
 <div class="gallery">
-    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_1/" target="_blank" class="gallery-item">
-        <img src="1.jpg" alt="Серія 1">
+    <a href="ВСТАВТЕ_ПОСИЛАННЯ_1" target="_blank" class="gallery-item">
+        <div class="image-container">
+            <img src="1.jpg" alt="Portfolio 1">
+        </div>
+        <span class="view-more">Натисни і подивись всю серію</span>
     </a>
 
-    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_2/" target="_blank" class="gallery-item">
-        <img src="2.jpg" alt="Серія 2">
+    <a href="ВСТАВТЕ_ПОСИЛАННЯ_2" target="_blank" class="gallery-item">
+        <div class="image-container">
+            <img src="2.jpg" alt="Portfolio 2">
+        </div>
+        <span class="view-more">Натисни і подивись всю серію</span>
     </a>
 
-    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_3/" target="_blank" class="gallery-item">
-        <img src="3.jpg" alt="Серія 3">
+    <a href="ВСТАВТЕ_ПОСИЛАННЯ_3" target="_blank" class="gallery-item">
+        <div class="image-container">
+            <img src="3.jpg" alt="Portfolio 3">
+        </div>
+        <span class="view-more">Натисни і подивись всю серію</span>
     </a>
 
-    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_4/" target="_blank" class="gallery-item">
-        <img src="4.jpg" alt="Серія 4">
+    <a href="ВСТАВТЕ_ПОСИЛАННЯ_4" target="_blank" class="gallery-item">
+        <div class="image-container">
+            <img src="4.jpg" alt="Portfolio 4">
+        </div>
+        <span class="view-more">Натисни і подивись всю серію</span>
     </a>
 
-    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_5/" target="_blank" class="gallery-item">
-        <img src="5.jpg" alt="Серія 5">
+    <a href="ВСТАВТЕ_ПОСИЛАННЯ_5" target="_blank" class="gallery-item">
+        <div class="image-container">
+            <img src="5.jpg" alt="Portfolio 5">
+        </div>
+        <span class="view-more">Натисни і подивись всю серію</span>
     </a>
 
-    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_6/" target="_blank" class="gallery-item">
-        <img src="6.jpg" alt="Серія 6">
+    <a href="ВСТАВТЕ_ПОСИЛАННЯ_6" target="_blank" class="gallery-item">
+        <div class="image-container">
+            <img src="6.jpg" alt="Portfolio 6">
+        </div>
+        <span class="view-more">Натисни і подивись всю серію</span>
     </a>
 </div>
 
@@ -161,4 +193,3 @@
 
 </body>
 </html>
-
