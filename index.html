@@ -3,137 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфоліо | Фотограф</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    
+    <title>Kadar Anna | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #1b1c17; /* Глибокий темний фон */
+            --text-color: #e0d8c3; /* Кремовий вінтажний текст */
+            --accent-color: #a67c52; /* Золотава бронза */
+        }
+
         body {
-            background-color: #1b1c17; /* Глибокий природний темний колір */
-            color: #f4f1ea;            /* Колір слонової кістки для тексту */
+            background-color: var(--bg-color);
+            color: var(--text-color);
             font-family: 'Montserrat', sans-serif;
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
         }
 
         header {
-            padding: 80px 20px;
             text-align: center;
-            background: linear-gradient(to bottom, #24261f, #1b1c17);
+            padding: 60px 20px;
         }
 
         .avatar {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #a89f8d;
+            border: 2px solid var(--accent-color);
             margin-bottom: 20px;
-            transition: transform 0.5s ease;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
-        
-        .avatar:hover { transform: rotate(5deg) scale(1.05); }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin: 0;
             letter-spacing: 3px;
-            margin: 10px 0;
             text-transform: uppercase;
         }
 
         .subtitle {
             font-style: italic;
-            color: #a89f8d;
+            color: var(--accent-color);
             font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
-
-        /* Стильна галерея */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin-top: 10px;
         }
 
         .gallery {
-            column-count: 3; /* Кількість колонок як у журналах */
-            column-gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        @media (max-width: 800px) { .gallery { column-count: 2; } }
-        @media (max-width: 500px) { .gallery { column-count: 1; } }
-
-        .photo-item {
-            margin-bottom: 15px;
-            break-inside: avoid;
-            background: #24261f;
-            border-radius: 4px;
+        .gallery-item {
+            position: relative;
             overflow: hidden;
+            aspect-ratio: 4 / 5;
+            border: 1px solid rgba(166, 124, 82, 0.2);
             transition: all 0.4s ease;
-            filter: grayscale(20%) brightness(0.9); /* Легкий ретро-ефект */
         }
 
-        .photo-item:hover {
-            filter: grayscale(0%) brightness(1.1);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        }
-
-        .photo-item img {
+        .gallery-item img {
             width: 100%;
-            display: block;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(20%);
+            transition: 0.6s ease;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+            filter: sepia(0%);
         }
 
         footer {
-            padding: 60px 20px;
             text-align: center;
-            border-top: 1px solid #2a2c24;
-            color: #6a6d5d;
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
         }
 
         .btn-contact {
             display: inline-block;
-            padding: 12px 30px;
-            border: 1px solid #a89f8d;
-            color: #a89f8d;
+            padding: 18px 40px;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            transition: 0.3s;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
         .btn-contact:hover {
-            background: #a89f8d;
-            color: #1b1c17;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(166, 124, 82, 0.4);
+        }
+
+        .copyright {
+            margin-top: 50px;
+            font-size: 0.75rem;
+            opacity: 0.5;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="avatar.jpg" alt="Anna" class="avatar">
-        <h1>АННА</h1>
-        <p class="subtitle">Ловлю світло та емоції</p>
-    </header>
+<header>
+    <img src="avatar.jpg" alt="Kadar Anna" class="avatar">
+    <h1>Kadar Anna</h1>
+    <p class="subtitle">Cinematic Fantasy & Dark Academia Photographer</p>
+</header>
 
-    <div class="container">
-        <div class="gallery">
-            <div class="photo-item"><img src="1.jpg" alt="Портрет"></div>
-            <div class="photo-item"><img src="2.jpg" alt="Природа"></div>
-            <div class="photo-item"><img src="3.jpg" alt="Момент"></div>
-            <div class="photo-item"><img src="4.jpg" alt="Фото"></div>
-            <div class="photo-item"><img src="5.jpg" alt="Фото"></div>
-            <div class="photo-item"><img src="6.jpg" alt="Фото"></div>
-        </div>
-    </div>
+<div class="gallery">
+    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_1/" target="_blank" class="gallery-item">
+        <img src="1.jpg" alt="Серія 1">
+    </a>
 
-    <footer>
-        <p>Готові до зйомки?</p>
-        <a href="https://www.instagram.com/kadar.photo?igsh=Zm8xMXUzZ2Z6Ynp0" class="btn-contact" target="_blank" rel="noopener noreferrer">Написати в Instagram</a>
-        <p style="margin-top: 40px; font-size: 0.7rem;">&copy; 2026. Створено з душею.</p>
-    </footer>
+    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_2/" target="_blank" class="gallery-item">
+        <img src="2.jpg" alt="Серія 2">
+    </a>
+
+    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_3/" target="_blank" class="gallery-item">
+        <img src="3.jpg" alt="Серія 3">
+    </a>
+
+    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_4/" target="_blank" class="gallery-item">
+        <img src="4.jpg" alt="Серія 4">
+    </a>
+
+    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_5/" target="_blank" class="gallery-item">
+        <img src="5.jpg" alt="Серія 5">
+    </a>
+
+    <a href="https://www.instagram.com/p/ПОСИЛАННЯ_6/" target="_blank" class="gallery-item">
+        <img src="6.jpg" alt="Серія 6">
+    </a>
+</div>
+
+<footer>
+    <p style="margin-bottom: 30px; font-family: 'Playfair Display', serif; font-size: 1.5rem;">Готові до магії зйомки?</p>
+    <a href="https://www.instagram.com/kadar.photo/" target="_blank" rel="noopener noreferrer" class="btn-contact">
+        Написати в Instagram
+    </a>
+    <p class="copyright">&copy; 2026 KADAR ANNA. Створено з душею.</p>
+</footer>
+
 </body>
 </html>
-
